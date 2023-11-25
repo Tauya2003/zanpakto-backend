@@ -1,0 +1,29 @@
+GET  http://localhost:3000/api/products
+
+###
+
+GET http://localhost:3000/api/products/655fbe6c749d44e72234a058
+
+###
+
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "name": "Product 5",
+    "price": 20,
+    "supplier": "655f0bb82706558f30933e01"
+}
+
+###
+
+DELETE http://localhost:4000/api/suppliers/655f0bb82706558f30933e01
+
+
+###
+PATCH http://localhost:4000/api/suppliers/655f0bb82706558f30933e01
+Content-Type: application/json
+
+{
+    "email": "tuya@gmail.com"
+}
