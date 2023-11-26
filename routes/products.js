@@ -24,6 +24,8 @@ router.post('/', async (req, res) => {
     name: req.body.name,
     supplier: req.body.supplier,
     price: req.body.price,
+    description: req.body.description,
+    rating: req.body.rating,
     image: req.body.image,
   });
 
@@ -55,6 +57,12 @@ router.patch('/:id', getProduct, async (req, res) => {
   }
   if (req.body.price != null) {
     res.product.price = req.body.price;
+  }
+  if (req.body.description != null) {
+    res.product.description = req.body.description;
+  }
+  if (req.body.rating != null) {
+    res.product.rating = req.body.rating;
   }
   if (req.body.image != null) {
     res.product.image = req.body.image;

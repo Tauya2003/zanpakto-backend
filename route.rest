@@ -10,9 +10,11 @@ POST http://localhost:3000/api/products
 Content-Type: application/json
 
 {
-    "name": "Product 5",
-    "price": 20,
-    "supplier": "655f0bb82706558f30933e01"
+    "name": "Shirt 2",
+    "price": 15.30,
+    "supplier": "655f0bb82706558f30933e01",
+    "rating": 4.5,
+    "description": "A nice shirt. It's red. It's a shirt. What more do you want?    "
 }
 
 ###
