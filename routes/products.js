@@ -18,6 +18,16 @@ router.get('/:id', getProduct, (req, res) => {
   res.json(res.product);
 });
 
+// Search for products
+router.get('/search/:name', async (req, res) => {
+  try {
+    const products = await Product.find({ name: { $regex: req.params.name, $options: 'i' } });
+    res.status(200).json(products);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // Creating a new product
 router.post('/', async (req, res) => {
   const product = new Product({
